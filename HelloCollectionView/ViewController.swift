@@ -14,6 +14,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet weak var myCC: UICollectionView!
     
     var images:[UIImage?] = []
+    var itemsInLine:CGFloat = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +40,15 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                                                selector: #selector(self.rotate),
                                                name: UIDevice.orientationDidChangeNotification,
                                                object: nil)
+        
     }
     
     @objc func rotate(){
-        print("rotate")
         let screenSize = UIScreen.main.bounds.size
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.minimumLineSpacing = 10
-        let side = screenSize.width / 3 - 10
+        let side = screenSize.width / itemsInLine - 10
         layout.itemSize = CGSize(width: side, height: side)
         myCC.setCollectionViewLayout(layout, animated: true)
     }
@@ -65,6 +66,18 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return cell
     }
     
+    @IBAction func action4(_ sender: Any) {
+        itemsInLine = 4
+        rotate()
+    }
+    @IBAction func action3(_ sender: Any) {
+        itemsInLine = 3
+        rotate()
+    }
+    @IBAction func action2(_ sender: Any) {
+        itemsInLine = 2
+        rotate()
+    }
     
 }
 
