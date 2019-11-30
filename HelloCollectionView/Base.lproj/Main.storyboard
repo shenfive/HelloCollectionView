@@ -33,14 +33,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTl-QI-Ajy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTl-QI-Ajy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="113"/>
+                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jTl-QI-Ajy" firstAttribute="top" secondItem="y45-Ub-wsp" secondAttribute="top" id="UY2-W8-m46"/>
+                                                <constraint firstItem="jTl-QI-Ajy" firstAttribute="leading" secondItem="y45-Ub-wsp" secondAttribute="leading" id="gnK-zT-Obg"/>
+                                                <constraint firstAttribute="bottom" secondItem="jTl-QI-Ajy" secondAttribute="bottom" id="rsD-ey-nz1"/>
+                                                <constraint firstAttribute="trailing" secondItem="jTl-QI-Ajy" secondAttribute="trailing" id="veH-17-Jfi"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="120" height="113"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="jTl-QI-Ajy" id="uWr-kL-ItE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
