@@ -66,6 +66,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+
+    
+    
     @IBAction func action4(_ sender: Any) {
         itemsInLine = 4
         rotate()
