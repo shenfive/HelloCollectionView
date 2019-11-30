@@ -26,6 +26,22 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         ]
         myCC.delegate = self
         myCC.dataSource = self
+        
+        let screenSize = UIScreen.main.bounds.size
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        layout.minimumLineSpacing = 10
+        
+        let side = screenSize.width / 3 - 10
+        
+        layout.itemSize = CGSize(width: side, height: side)
+        
+        myCC.setCollectionViewLayout(layout, animated: false)
+        
+        
     }
     
     //MARK: CollectionView Delegate
